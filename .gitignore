@@ -1,0 +1,11 @@
+/MDK-ARM/DebugConfig/*.dbgconf
+/MDK-ARM/*.11714
+/MDK-ARM/puppy-rtos/*.d
+/MDK-ARM/puppy-rtos/*.o
+/MDK-ARM/puppy-rtos/*.axf
+/MDK-ARM/puppy-rtos/*.htm
+/MDK-ARM/puppy-rtos/*.hex
+/MDK-ARM/puppy-rtos/*.lnp
+/MDK-ARM/puppy-rtos/*.map
+/MDK-ARM/puppy-rtos/*.sct
+/MDK-ARM/puppy-rtos/*.dep
