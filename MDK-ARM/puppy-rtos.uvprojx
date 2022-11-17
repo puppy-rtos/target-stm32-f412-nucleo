@@ -550,19 +550,19 @@
           <GroupName>Tests</GroupName>
           <Files>
             <File>
+              <FileName>kapi_tc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\kernel-tests\kapi_tc.c</FilePath>
+            </File>
+            <File>
               <FileName>kobj_tc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\tests\kobj_tc.c</FilePath>
+              <FilePath>..\..\kernel-tests\kobj_tc.c</FilePath>
             </File>
             <File>
               <FileName>ktype_tc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\tests\ktype_tc.c</FilePath>
-            </File>
-            <File>
-              <FileName>kapi_tc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\tests\kapi_tc.c</FilePath>
+              <FilePath>..\..\kernel-tests\ktype_tc.c</FilePath>
             </File>
           </Files>
         </Group>

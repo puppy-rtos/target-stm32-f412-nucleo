@@ -203,7 +203,7 @@
 
   <Group>
     <GroupName>Application</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -587,7 +587,7 @@
 
   <Group>
     <GroupName>Tests</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -598,8 +598,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\tests\kobj_tc.c</PathWithFileName>
-      <FilenameWithoutPath>kobj_tc.c</FilenameWithoutPath>
+      <PathWithFileName>..\..\kernel-tests\kapi_tc.c</PathWithFileName>
+      <FilenameWithoutPath>kapi_tc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -610,8 +610,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\tests\ktype_tc.c</PathWithFileName>
-      <FilenameWithoutPath>ktype_tc.c</FilenameWithoutPath>
+      <PathWithFileName>..\..\kernel-tests\kobj_tc.c</PathWithFileName>
+      <FilenameWithoutPath>kobj_tc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -622,8 +622,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\tests\kapi_tc.c</PathWithFileName>
-      <FilenameWithoutPath>kapi_tc.c</FilenameWithoutPath>
+      <PathWithFileName>..\..\kernel-tests\ktype_tc.c</PathWithFileName>
+      <FilenameWithoutPath>ktype_tc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
