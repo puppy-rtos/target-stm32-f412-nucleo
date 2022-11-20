@@ -520,11 +520,6 @@
               <FilePath>..\..\kernel\irq.c</FilePath>
             </File>
             <File>
-              <FileName>mmheap_tlsf.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\kernel\mmheap_tlsf.c</FilePath>
-            </File>
-            <File>
               <FileName>ostick.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\kernel\ostick.c</FilePath>
@@ -543,6 +538,21 @@
               <FileName>thread.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\kernel\thread.c</FilePath>
+            </File>
+            <File>
+              <FileName>object.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\kernel\object.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Arch</GroupName>
+          <Files>
+            <File>
+              <FileName>arch_thread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\kernel\arch\arm\cortex-m4\arch_thread.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -12,6 +12,8 @@ int main(void)
     int board_init(void);
     board_init();
 
+    // kobj_tc_main();
+
     while (1)
     {
         printk("tick:%d\r\n", HAL_GetTick());
