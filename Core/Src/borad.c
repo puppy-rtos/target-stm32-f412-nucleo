@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stdio.h"
+#include <puppy.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -64,7 +65,6 @@ static void MX_USART3_UART_Init(void);
 
 #if 1         
 
-/* FILE is typedef¡¯ d in stdio.h. */
 FILE __stdout;      
 
 void _sys_exit(int x)
@@ -109,7 +109,8 @@ int board_init(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
+  HAL_SetTickFreq(HAL_TICK_FREQ_100HZ);
+  p_tick_init(100);
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */

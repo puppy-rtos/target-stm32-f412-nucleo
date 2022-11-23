@@ -183,7 +183,7 @@
             <hadIRAM>1</hadIRAM>
             <hadXRAM>0</hadXRAM>
             <uocXRam>0</uocXRam>
-            <RvdsVP>2</RvdsVP>
+            <RvdsVP>1</RvdsVP>
             <RvdsMve>0</RvdsMve>
             <RvdsCdeCp>0</RvdsCdeCp>
             <nBranchProt>0</nBranchProt>
@@ -314,7 +314,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>4</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -505,11 +505,6 @@
           <GroupName>Kernel</GroupName>
           <Files>
             <File>
-              <FileName>atomic.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\kernel\atomic.c</FilePath>
-            </File>
-            <File>
               <FileName>errno.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\kernel\errno.c</FilePath>
@@ -553,6 +548,16 @@
               <FileName>arch_thread.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\kernel\arch\arm\cortex-m4\arch_thread.c</FilePath>
+            </File>
+            <File>
+              <FileName>arch_atomic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\kernel\arch\arm\cortex-m4\arch_atomic.c</FilePath>
+            </File>
+            <File>
+              <FileName>arch_irq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\kernel\arch\arm\cortex-m4\arch_irq.c</FilePath>
             </File>
           </Files>
         </Group>
