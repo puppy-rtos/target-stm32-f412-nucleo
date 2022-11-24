@@ -539,6 +539,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\kernel\object.c</FilePath>
             </File>
+            <File>
+              <FileName>init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\kernel\init.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
