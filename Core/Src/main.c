@@ -9,13 +9,11 @@
 
 
 struct _thread_obj t1;
-
 __attribute__((aligned(8)))
 uint8_t thread_stack[1024];
 
 
 struct _thread_obj t2;
-
 __attribute__((aligned(8)))
 uint8_t thread2_stack[1024];
 
@@ -30,9 +28,11 @@ void t1_entry(void *parm)
 { 
     while(1)
     {
-        printk("hello I'm in thread t1,%d\r\n", p_tick_get());
-        HAL_Delay(1000);
-        p_thread_yield();
+        p_sched_lock();
+        printk("t1:%d\r\n", p_tick_get());
+        p_sched_unlock();
+//        p_thread_sleep(200);
+        // p_thread_yield();
     }
 }
 void t2_entry(void *parm)
@@ -40,15 +40,20 @@ void t2_entry(void *parm)
     p_obj_t thread1 = p_obj_find("t1");
     p_thread_start(thread1);
 
-    printk("hello I'm in thread t2,%d\r\n", p_tick_get());
-    HAL_Delay(1000);
-    p_thread_yield();
+    while(1)
+    {
+        p_sched_lock();
+        printk("hello I'm in thread t2,%d\r\n", p_tick_get());
+        p_sched_unlock();
+        p_thread_sleep(200);
+    }
+    // p_thread_yield();
     printk("thread t2 will exit,%d\r\n", p_tick_get());
 
 }
 void thread_init_tc(void)
 {
-    _thread_init(&t1, "t1", t1_entry, 0, thread_stack, sizeof(thread_stack), 12);
+    _thread_init(&t1, "t1", t1_entry, 0, thread_stack, sizeof(thread_stack), 13);
     _thread_init(&t2, "t2", t2_entry, 0, thread2_stack, sizeof(thread2_stack), 12);
     p_thread_start(&t2);
 }
