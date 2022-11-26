@@ -24,6 +24,7 @@ int main(void)
 {
     int board_init(void);
     board_init();
+    printk("Hello Puppy!\r\n");
     p_thread_init(&t1, "idle", t1_thread_entry, NULL,
                   t1_thread_stack,
                   sizeof(t1_thread_stack),
