@@ -8,7 +8,9 @@ add_includedirs("Drivers/STM32F4xx_HAL_Driver/Inc",
                 "Core/Inc", 
                 "Drivers/CMSIS/Device/ST/STM32F4xx/Include",
                 "Drivers/CMSIS/Include", 
-                "../kernel/include")
+                "../kernel/include",
+                "../nr_micro_shell/inc"
+                )
 
 -- target("kernel")
 --     add_rules("mdk.static")
@@ -19,6 +21,7 @@ target("hello")
     add_files("../kernel/**.c")
     add_rules("mdk.binary")
     add_files("Core/Src/*.c", "/Drivers/**.c", "Drivers/STM32F4xx_HAL_Driver/Src/*.s")
+    add_files("../nr_micro_shell/src/*.c", "../nr_micro_shell/examples/nr_micro_shell_commands.c")
     after_build(function (package)
         os.exec("D:/Progm/Keil_v5/ARM/ARMCLANG/bin/fromelf.exe --bin $(buildir)/cross/cortex-m4/debug/hello.axf --output puppy.bin")
     end)

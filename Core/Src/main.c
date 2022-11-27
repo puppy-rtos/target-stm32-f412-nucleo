@@ -6,17 +6,22 @@
 
 #include "main.h"
 #include <puppy.h>
+#include "nr_micro_shell.h"
 
-struct _thread_obj t1;
-__attribute__((aligned(8)))
-uint8_t t1_thread_stack[1024];
+struct _thread_obj shell;
+__attribute__((aligned(4)))
+uint8_t shell_thread_stack[1024];
 
-void t1_thread_entry(void *parm)
+void shell_thread_entry(void *parm)
 {
+    shell_init();
     while(1)
     {
-        printk("t1:%d\r\n", p_tick_get());
-        p_thread_sleep(100);
+        char c = getchar();
+        if(c)
+        {
+            shell(c);
+        }
     }
 }
 
@@ -25,10 +30,11 @@ int main(void)
     int board_init(void);
     board_init();
     printk("Hello Puppy!\r\n");
-    p_thread_init(&t1, "idle", t1_thread_entry, NULL,
-                  t1_thread_stack,
-                  sizeof(t1_thread_stack),
+
+    p_thread_init(&shell, "shell", shell_thread_entry, NULL,
+                  shell_thread_stack,
+                  sizeof(shell_thread_stack),
                   12);
-    p_thread_start(&t1);
+    p_thread_start(&shell);
 }
 

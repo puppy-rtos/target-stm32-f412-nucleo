@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F412Zx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;..\..\kernel\include</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;..\..\kernel\include;..\..\nr_micro_shell\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -583,6 +583,36 @@
               <FileName>ktype_tc.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\kernel-tests\ktype_tc.c</FilePath>
+            </File>
+            <File>
+              <FileName>ksem_tc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\kernel-tests\ksem_tc.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>cli</GroupName>
+          <Files>
+            <File>
+              <FileName>ansi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\nr_micro_shell\src\ansi.c</FilePath>
+            </File>
+            <File>
+              <FileName>ansi_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\nr_micro_shell\src\ansi_port.c</FilePath>
+            </File>
+            <File>
+              <FileName>nr_micro_shell.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\nr_micro_shell\src\nr_micro_shell.c</FilePath>
+            </File>
+            <File>
+              <FileName>nr_micro_shell_commands.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\nr_micro_shell\examples\nr_micro_shell_commands.c</FilePath>
             </File>
           </Files>
         </Group>
