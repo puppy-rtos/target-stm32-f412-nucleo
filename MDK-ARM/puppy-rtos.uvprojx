@@ -497,7 +497,7 @@
             <File>
               <FileName>startup_stm32f412zx.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\Drivers\STM32F4xx_HAL_Driver\Src\startup_stm32f412zx.s</FilePath>
+              <FilePath>..\Drivers\CMSIS\Device\ST\STM32F4xx\arm\startup_stm32f412zx.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -543,6 +543,11 @@
               <FileName>init.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\kernel\init.c</FilePath>
+            </File>
+            <File>
+              <FileName>util.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\kernel\util.c</FilePath>
             </File>
           </Files>
         </Group>

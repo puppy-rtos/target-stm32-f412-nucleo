@@ -17,7 +17,7 @@ void shell_thread_entry(void *parm)
     shell_init();
     while(1)
     {
-        char c = getchar();
+        char c = p_hw_cons_getc();
         if(c)
         {
             shell(c);
@@ -27,8 +27,6 @@ void shell_thread_entry(void *parm)
 
 int main(void)
 {
-    int board_init(void);
-    board_init();
     printk("Hello Puppy!\r\n");
 
     p_thread_init(&shell, "shell", shell_thread_entry, NULL,

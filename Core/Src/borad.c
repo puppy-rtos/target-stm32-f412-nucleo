@@ -57,35 +57,33 @@ static void MX_USART3_UART_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-#include <rt_sys.h>
-#ifdef __clang__
-    __asm(".global __use_no_semihosting\n\t");
-#else
-    #pragma import(__use_no_semihosting_swi)
-#endif
-
-/* for exit() and abort() */
-void _sys_exit(int return_code)
+int p_hw_borad_init(void)
 {
-    while (1);
+    board_init();
+    return 0;
 }
 
-#ifdef __MICROLIB
-#include <stdio.h>
-extern UART_HandleTypeDef huart3;
-
-int fputc(int ch, FILE *f)
+int p_hw_cons_getc(void)
 {
-    HAL_UART_Transmit(&huart3, (uint8_t *)&ch, 1, 0xffff);
-    return ch;
-}
-int fgetc(FILE *f)
-{   
     uint8_t ch = 0;  
     HAL_UART_Receive(&huart3,&ch, 1, 0xffff);
     return ch;
 }
-#endif /* __MICROLIB */
+
+int p_hw_cons_output(const char *str, int len)
+{
+    int i = 0;
+    for(i = 0; i < len; i++)
+    {
+      if (str[i] == '\n')
+      {
+          char n = '\r';
+          HAL_UART_Transmit(&huart3, (uint8_t *)&n, 1, 0xffff);
+      }
+       HAL_UART_Transmit(&huart3, (uint8_t *)&str[i], 1, 0xFFFF);
+    }
+    return 0;
+}
 
 /* USER CODE END 0 */
 
